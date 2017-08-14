@@ -1,0 +1,23 @@
+.btn-default.btnplus{
+	background-color: red;
+}
+
+.btn-default.btnmin{
+	background-color: yellow;
+}
+
+.btn-default.btnx{
+	background-color: green;
+}
+
+.btn-default.btndiv{
+	background-color: purple;
+}
+
+.btn-default.btnuse{
+	background-color: gray;
+}
+
+.btn-default.btnhelp{
+	background-color: blue;
+}
