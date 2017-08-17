@@ -1,3 +1,15 @@
-#col-calc{
-	float: left;
+body{
+	background-color: #eaeaea;
+}
+.container{
+	width:100%;
+	margin: 20px auto;
+	max-width: 800px;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 8px;
+}
+.symbols{
+	font-size: 20px;
+	padding-top: 5px;
 }

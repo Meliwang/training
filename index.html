@@ -10,29 +10,72 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<p>Calculator</p>
-	<div id="btnCol">
-	<button type="button" class="btn btn-danger" id="btnplus">+</button>
-	<button type="button" class="btn btn-warning" id="btnmin">-</button>
-	<button type="button" class="btn btn-success" id="btnx">x</button>
-	<button type="button" class="btn btn-primary" id="btndiv">/</button>
-	<button type="button" class="btn btn-default" id="btnuse">How to Use</button>
-	<button type="button" class="btn btn-info" id="btnhelp">Help</button>
-	</div>
-	<div class="hidden" id="col-calc">
-	<input type="text" class="form-control" id="col1">
-	<span>+</span>
-	<input type="text" class="form-control" id="col2">
-	<button type="button" class="btn btn-default btnhelp" id="btnhelp">Calculator</button>
-	<span>Your Result is: </span>
-	<span></span>
+	<div class='container'>
+		<div id="btnCol" class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+			<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6'>
+				<button type="button" class="btn btn-danger btn-block" id="btnplus">+</button>
+			</div>
+			<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6'>
+				<button type="button" class="btn btn-warning btn-block" id="btnmin">-</button>
+			</div>
+			<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6'>
+				<button type="button" class="btn btn-success btn-block" id="btnx">x</button>
+			</div>
+			<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6'>
+				<button type="button" class="btn btn-primary btn-block" id="btndiv">/</button>
+			</div>
+			<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6'>
+				<button type="button" class="btn btn-default btn-block" id="btnuse">How to Use</button>
+			</div>
+			<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6'>
+				<button type="button" class="btn btn-info btn-block" id="btnhelp">Help</button>
+			</div>
+		</div>
+		<div style='display:none;' id="col-calc" class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+			<div class='col-xs-5'>
+				<input type="text" class="form-control" id="txtangka1"/>
+			</div>
+			<div class='col-xs-2 text-center symbols'>
+				<!--SYMBOL AKAN DI PRINT SAMA JQUERY-->
+			</div>
+			<div class='col-xs-5'>
+				<input type="text" class="form-control" id="txtangka2"/>
+			</div>
+			<button type="button" class="btn btn-success" id="btncalc">Calculate</button>
+			<button type="button" class="btn btn-danger" id="btnclose">Close</button>
+		</div>
 	</div>
 </body>
 
 <script>
 	$('#btnplus').click(function(){
 		$('#btnCol').slideUp();
-		$('#col-calc').removeClass('hidden');
-	})
+		$('#col-calc').slideDown();
+		$('.symbols').text('+');
+	});
+	$('#btnmin').click(function(){
+		$('#btnCol').slideUp();
+		$('#col-calc').slideDown();
+		$('.symbols').text('-');
+	});
+	$('#btnx').click(function(){
+		$('#btnCol').slideUp();
+		$('#col-calc').slideDown();
+		$('.symbols').text('x');
+	});
+	$('#btndiv').click(function(){
+		$('#btnCol').slideUp();
+		$('#col-calc').slideDown();
+		$('.symbols').text('/');
+	});
+	$('#btnplus').click(function(){
+		$('#btnCol').slideUp();
+		$('#col-calc').slideDown();
+		$('.symbols').text('+');
+	});
+	$('#btnclose').click(function(){
+		$('#btnCol').slideDown();
+		$('#col-calc').slideUp();;
+	});
 </script>
 </html>
